@@ -14,6 +14,13 @@
             <h2 class="card-title fw-bold p-3">
                 {{ $post->title }}
             </h2>
+        </div>
+        <div class="tags mb-5">
+            @foreach ($post->Technologies as $technology)
+                <span class="p-2 badge rounded-pill"
+                style="background-color: {{ $technology->bg_color }}"> #{{ $technology->name }}</span>
+            @endforeach
+        </div>
         <div class="card-image mb-4">
             @if ( $post->isImageAUrl())
                 <img src="{{ $post->image }}"
