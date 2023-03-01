@@ -19,6 +19,6 @@ class Post extends Model
     return filter_var($this->image, FILTER_VALIDATE_URL);
 }
     public function Technologies(){
-    return $this->belongsToMany(Tag::class);
+    return $this->belongsToMany(Technology::class);
 }
 }
